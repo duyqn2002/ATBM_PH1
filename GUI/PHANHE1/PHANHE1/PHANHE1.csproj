@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF7EC418-6621-4571-9092-E7BEE0E90C91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PHANHE1</RootNamespace>
+    <AssemblyName>PHANHE1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fAddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddRole.Designer.cs">
+      <DependentUpon>fAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddUser.Designer.cs">
+      <DependentUpon>fAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDeleteRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDeleteRole.Designer.cs">
+      <DependentUpon>fDeleteRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDeleteUser.Designer.cs">
+      <DependentUpon>fDeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditUser.Designer.cs">
+      <DependentUpon>fEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGrantPri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGrantPri.Designer.cs">
+      <DependentUpon>fGrantPri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGrantRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGrantRole.Designer.cs">
+      <DependentUpon>fGrantRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRevoke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRevoke.Designer.cs">
+      <DependentUpon>fRevoke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fShowUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fShowUser.Designer.cs">
+      <DependentUpon>fShowUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPrivilege.Designer.cs">
+      <DependentUpon>viewPrivilege.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fAddRole.resx">
+      <DependentUpon>fAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddUser.resx">
+      <DependentUpon>fAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDeleteRole.resx">
+      <DependentUpon>fDeleteRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDeleteUser.resx">
+      <DependentUpon>fDeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fEditUser.resx">
+      <DependentUpon>fEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGrantPri.resx">
+      <DependentUpon>fGrantPri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGrantRole.resx">
+      <DependentUpon>fGrantRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRevoke.resx">
+      <DependentUpon>fRevoke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fShowUser.resx">
+      <DependentUpon>fShowUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="viewPrivilege.resx">
+      <DependentUpon>viewPrivilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
