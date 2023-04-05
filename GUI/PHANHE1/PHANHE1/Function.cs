@@ -108,6 +108,36 @@ namespace PHANHE1
             }
         }
 
+        public static int isTableValid(string tablename) // Hàm kiểm tra Table có tồn tại hay không
+        {
+            OracleCommand cmd = new OracleCommand();
+
+            //Gán kết nối
+            cmd.Connection = Con;
+
+            //Gán lệnh SQL
+            string sql = "SELECT * FROM ALL_TABLES WHERE table_name = " + "'" + tablename + "'";
+            cmd.CommandText = sql;
+
+            //Kiểm tra
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                //Giải phóng bộ nhớ
+                cmd.Dispose();
+                cmd = null;
+                return 1;
+            }
+            else
+            {
+                //Giải phóng bộ nhớ
+                cmd.Dispose();
+                cmd = null;
+                return 0;
+            }
+        }
+
         public static int isRoleValid(string username)  // Hàm kiểm tra Role có tồn tại hay không
         {
             OracleCommand cmd = new OracleCommand();

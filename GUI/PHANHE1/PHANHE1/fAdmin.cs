@@ -91,7 +91,7 @@ namespace PHANHE1
         {
             if (panel1.Height == 40)
             {
-                panel1.Height = 700;
+                panel1.Height = 780;
             }
             else
             {
@@ -110,6 +110,22 @@ namespace PHANHE1
         private void btnGrantPri_Click(object sender, EventArgs e)
         {
             fGrantPri f = new fGrantPri();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            fViewInfo f = new fViewInfo();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void BtnAddTable_Click(object sender, EventArgs e)
+        {
+            fCreateTable f = new fCreateTable();
             this.Hide();
             f.ShowDialog();
             this.Show();

@@ -30,6 +30,8 @@ namespace PHANHE1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnAddTable = new System.Windows.Forms.Button();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnFunc1 = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.btnRevoke = new System.Windows.Forms.Button();
@@ -46,6 +48,8 @@ namespace PHANHE1
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnAddTable);
+            this.panel1.Controls.Add(this.btnView);
             this.panel1.Controls.Add(this.btnFunc1);
             this.panel1.Controls.Add(this.btnEditUser);
             this.panel1.Controls.Add(this.btnRevoke);
@@ -58,11 +62,35 @@ namespace PHANHE1
             this.panel1.Controls.Add(this.bntPrivilege);
             this.panel1.Controls.Add(this.bntUsers);
             this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.MaximumSize = new System.Drawing.Size(280, 700);
+            this.panel1.MaximumSize = new System.Drawing.Size(280, 800);
             this.panel1.MinimumSize = new System.Drawing.Size(280, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 700);
+            this.panel1.Size = new System.Drawing.Size(280, 764);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnAddTable
+            // 
+            this.BtnAddTable.BackColor = System.Drawing.Color.BurlyWood;
+            this.BtnAddTable.ForeColor = System.Drawing.Color.OliveDrab;
+            this.BtnAddTable.Location = new System.Drawing.Point(0, 682);
+            this.BtnAddTable.Name = "BtnAddTable";
+            this.BtnAddTable.Size = new System.Drawing.Size(259, 62);
+            this.BtnAddTable.TabIndex = 12;
+            this.BtnAddTable.Text = "Create table";
+            this.BtnAddTable.UseVisualStyleBackColor = false;
+            this.BtnAddTable.Click += new System.EventHandler(this.BtnAddTable_Click);
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnView.ForeColor = System.Drawing.Color.OliveDrab;
+            this.btnView.Location = new System.Drawing.Point(0, 624);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(259, 62);
+            this.btnView.TabIndex = 11;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnFunc1
             // 
@@ -201,8 +229,9 @@ namespace PHANHE1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(1216, 710);
+            this.ClientSize = new System.Drawing.Size(1216, 791);
             this.Controls.Add(this.panel1);
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -227,5 +256,7 @@ namespace PHANHE1
         private System.Windows.Forms.Button btnEditUser;
         private System.Windows.Forms.Button btnDelUser;
         private System.Windows.Forms.Button btnFunc1;
+        private System.Windows.Forms.Button btnView;
+        private System.Windows.Forms.Button BtnAddTable;
     }
 }
