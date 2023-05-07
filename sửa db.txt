@@ -1,0 +1,2 @@
+nhanvien thêm username
+luong va phucap của nhanvien là varchar2 để encrypt 

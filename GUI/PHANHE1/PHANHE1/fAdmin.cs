@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PHANHE1
 {
     public partial class fAdmin : Form
     {
+        Thread t;
         public fAdmin()
         {
             InitializeComponent();
@@ -129,6 +131,19 @@ namespace PHANHE1
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        public void open_FormLogin(object obj)
+        {
+            Application.Run(new fLogin());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t = new Thread(open_FormLogin);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
     }
 }

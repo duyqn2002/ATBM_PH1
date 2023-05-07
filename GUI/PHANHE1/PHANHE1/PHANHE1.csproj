@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -161,8 +161,122 @@
     <Compile Include="fViewInfo.Designer.cs">
       <DependentUpon>fViewInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\fNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\fNhanSu.Designer.cs">
+      <DependentUpon>fNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\fNS_EditNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\fNS_EditNV.Designer.cs">
+      <DependentUpon>fNS_EditNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\fNS_EditPHGBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\fNS_EditPHGBAN.Designer.cs">
+      <DependentUpon>fNS_EditPHGBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\fNS_ViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\fNS_ViewInfo.Designer.cs">
+      <DependentUpon>fNS_ViewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\fNV_EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\fNV_EditInfo.Designer.cs">
+      <DependentUpon>fNV_EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\fNV_ViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\fNV_ViewInfo.Designer.cs">
+      <DependentUpon>fNV_ViewInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quan ly truc tiep\fQLTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan ly truc tiep\fQLTT.Designer.cs">
+      <DependentUpon>fQLTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly truc tiep\fQLTT_EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan ly truc tiep\fQLTT_EditInfo.Designer.cs">
+      <DependentUpon>fQLTT_EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan ly truc tiep\fQLTT_ViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan ly truc tiep\fQLTT_ViewInfo.Designer.cs">
+      <DependentUpon>fQLTT_ViewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\fTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\fTaiChinh.Designer.cs">
+      <DependentUpon>fTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\fTC_EditNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\fTC_EditNV.Designer.cs">
+      <DependentUpon>fTC_EditNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiChinh\fTC_ViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiChinh\fTC_ViewInfo.Designer.cs">
+      <DependentUpon>fTC_ViewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\fEditDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\fEditDA.Designer.cs">
+      <DependentUpon>fEditDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDeAn\fTruongDeAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDeAn\fTruongDeAn.Designer.cs">
+      <DependentUpon>fTruongDeAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_EditInfo.Designer.cs">
+      <DependentUpon>fTP_EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_EditPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_EditPC.Designer.cs">
+      <DependentUpon>fTP_EditPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_ViewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\fTP_ViewInfo.Designer.cs">
+      <DependentUpon>fTP_ViewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongPhong\fTruongPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongPhong\fTruongPhong.Designer.cs">
+      <DependentUpon>fTruongPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewPrivilege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +322,27 @@
     <EmbeddedResource Include="fViewInfo.resx">
       <DependentUpon>fViewInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\fNhanSu.resx">
+      <DependentUpon>fNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\fNS_EditNV.resx">
+      <DependentUpon>fNS_EditNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\fNS_EditPHGBAN.resx">
+      <DependentUpon>fNS_EditPHGBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\fNS_ViewInfo.resx">
+      <DependentUpon>fNS_ViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\fNV_EditInfo.resx">
+      <DependentUpon>fNV_EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\fNV_ViewInfo.resx">
+      <DependentUpon>fNV_ViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -217,6 +352,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Quan ly truc tiep\fQLTT.resx">
+      <DependentUpon>fQLTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly truc tiep\fQLTT_EditInfo.resx">
+      <DependentUpon>fQLTT_EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan ly truc tiep\fQLTT_ViewInfo.resx">
+      <DependentUpon>fQLTT_ViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\fTaiChinh.resx">
+      <DependentUpon>fTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\fTC_EditNV.resx">
+      <DependentUpon>fTC_EditNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiChinh\fTC_ViewInfo.resx">
+      <DependentUpon>fTC_ViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\fEditDA.resx">
+      <DependentUpon>fEditDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDeAn\fTruongDeAn.resx">
+      <DependentUpon>fTruongDeAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong\fTP_EditInfo.resx">
+      <DependentUpon>fTP_EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong\fTP_EditPC.resx">
+      <DependentUpon>fTP_EditPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong\fTP_ViewInfo.resx">
+      <DependentUpon>fTP_ViewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhong\fTruongPhong.resx">
+      <DependentUpon>fTruongPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewPrivilege.resx">
       <DependentUpon>viewPrivilege.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,5 +416,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
