@@ -147,7 +147,7 @@ where CAP = 3 and MIEN = 0 and LINHVUC = 0;
 
 update THONGBAO 
 set row_label = char_to_label('NOTIFICATION_OLS', 'TP:MN:SXUAT')
-where CAP >= 2 and MIEN = 1 and LINHVUC = 2;
+where CAP = 2 and MIEN = 1 and LINHVUC = 2;
 
 update THONGBAO 
 set row_label = char_to_label('NOTIFICATION_OLS', 'GD:MB:MBAN,SXUAT,GCONG')

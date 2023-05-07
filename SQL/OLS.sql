@@ -44,13 +44,6 @@ sa_components.create_level(
     short_name => 'TP',
     level_num => 500);
 
-
-sa_components.create_level(
-    policy_name => 'NOTIFICATION_OLS',
-    long_name => 'Truong phong all',
-    short_name => 'TPA',
-    level_num => 499);
-
 sa_components.create_level(
     policy_name => 'NOTIFICATION_OLS',
     long_name => 'Nhan vien',
@@ -103,8 +96,6 @@ execute sa_label_admin.create_label('NOTIFICATION_OLS',2003,'GD:MB:MBAN,SXUAT,GC
 --execute sa_label_admin.drop_label('NOTIFICATION_OLS','TP:MB,MT,MN:MBAN,SXUAT,GCONG');
 --/
 execute sa_label_admin.create_label('NOTIFICATION_OLS',2004,'TP:MB,MT,MN:MBAN,SXUAT,GCONG');
-/
-execute sa_label_admin.create_label('NOTIFICATION_OLS',2010,'TPA:MB,MT,MN:MBAN,SXUAT,GCONG');
 /
 --execute sa_label_admin.create_label('NOTIFICATION_OLS',2004,'TP:MB,MT,MN');
 --/
