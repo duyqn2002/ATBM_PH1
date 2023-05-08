@@ -1,20 +1,3 @@
-SELECT * FROM SYS.DG_PMS;
-SELECT * FROM SYS.DG_TTCANHAN;
-
-SELECT * FROM SYS.TT_TTCANHAN;
-SELECT * FROM SYS.TT_PMS;
-
-SELECT * FROM SYS.TT_TTCANHAN;
-SELECT * FROM SYS.QL_NV;
-
---E
-SET SERVEROUTPUT ON;
-variable RCS REFCURSOR;
-
-
-BEGIN
-  SYS.PROC_DG_PMS1();
-END;
 
 SELECT * FROM DBA_TAB_PRIVS;
 SELECT * FROM USER_SYS_PRIVS;
@@ -44,6 +27,8 @@ select * from U_AD.DEAN;
 
 --EXECUTE U_AD.PROC_NV_UPDATE_NHANVIEN('VCL','','',1);
 SELECT * FROM NHANVIEN WHERE MANV= 'NV227';
+
+
 --tc2
 alter session set "_ORACLE_SCRIPT"=true;
 
@@ -79,6 +64,8 @@ from U_AD.PHANCONG
 where MANV = 'NV001' AND MADA ='DA93';
 
 SELECT * FROM PHANCONG WHERE MANV = 'NV001' AND MADA = 'DA93';
+
+
 --TC4
 alter session set "_ORACLE_SCRIPT"=true;
 
@@ -137,3 +124,40 @@ INSERT INTO U_AD.DEAN(MADA) VALUES ('DA099'); -- them dean
 INSERT INTO U_AD.DEAN(MADA, TENDA, NGAYBD, PHONG) VALUES ('DA001', 'Name_DA001', '18-12-2006', 'PB02'); -- them dean
 UPDATE U_AD.DEAN SET NGAYBD = TO_DATE('11/18/15','MM/DD/YY') WHERE MADA = 'DA099';commit; -- cap nhat dean
 DELETE FROM U_AD.DEAN WHERE MADA = 'DA099';commit; -- xoa dean
+
+--BGD
+alter session set "_ORACLE_SCRIPT"=true;
+
+create user BGD01 identified by 0;
+GRANT CREATE SESSION TO BGD01;
+grant ROLE_BGD to BGD01;
+
+select * from U_AD.NHANVIEN;
+--OLS
+select * from U_AD.THONGBAO;
+
+
+--------------------STANDARD AUDIT TESTING--------------------
+--B1: dang nhap bang user THANHTRA_6 (khac U_AD la duoc) va chay cau lenh sau:
+
+-- B2: dang nhap bang U_AD, chay cau lenh sau de xem ket qua audit:
+select username, EXTENDED_TIMESTAMP ,obj_name, action_name, sql_text 
+from dba_audit_trail
+WHERE OBJ_NAME = 'NHANVIEN';
+
+--FG Audit
+--a
+SELECT * FROM PHANCONG;
+UPDATE PHANCONG
+SET THOIGIAN = '09-NOV-06'
+WHERE MANV='NV018';
+
+--b (user BGD)
+SELECT * FROM U_AD.NHANVIEN;
+
+--c (user U_AD, TC)
+update U_AD.NHANVIEN set LUONG = 1234 where MANV = 'NV061'; COMMIT;
+SELECT DBUID, LSQLTEXT, NTIMESTAMP# FROM SYS.FGA_LOG$;
+
+
+

@@ -35,7 +35,7 @@ namespace PHANHE1.NhanVien
             this.Hide();
             f.ShowDialog();
             this.Show();
-
+ 
         }
 
         public void open_FormLogin(object obj)
